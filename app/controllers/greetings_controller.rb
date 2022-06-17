@@ -3,7 +3,9 @@ class GreetingsController < ApplicationController
 
   # GET /greetings or /greetings.json
   def index
-    @greetings = Greeting.all
+    greetings = Greeting.all
+
+    render json: greetings.sample
   end
 
   # GET /greetings/1 or /greetings/1.json
